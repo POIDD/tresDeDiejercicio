@@ -1,0 +1,191 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container >*{
+    box-shadow: -1px 0px 7px 0px black;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+
+.header{
+    grid-area: header;
+    background-color: white;
+    border: 1px;
+}
+
+.section{
+    grid-area: section;
+    background-color: white;
+    border: 1px;
+}
+
+.main{
+    background-color: white;
+    height: 50px;
+    margin: 15px;
+    border: 1px;
+
+}
+
+.slider{
+    background-color: orangered;
+    height: 300px;
+    margin: 15px;
+    border: 1px;
+    
+
+}
+
+.article{
+    background-color: rgb(231, 141, 129);
+    width: 800px;
+    height: 100px;
+    margin: 15px;
+    float: left;
+}
+
+.aside{
+    background-color: rgb(231, 141, 129);
+    float: left;
+    width: 465px;
+    height: 100px;
+    margin: 15px;
+
+}
+
+.footer{
+    grid-area: footer;
+    background-color: black;
+}
+
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header"
+    "section"
+    "footer";
+}
+
+@media (min-width: 1080px){
+    .grid-container{
+        grid-template:  
+        "header header header" 170px
+        "section section section" auto
+        "footer footer footer" 140px /
+        200px auto 300px;
+    }
+}
+
+/* imagen del hader tamañoi */
+.header img{ 
+     width: 160px;
+     height: 160px;
+     float: left;
+}
+
+/* lista horizontal del main */
+#navegador ul{
+    list-style-type: none;
+    text-align: center;
+ }
+ #navegador li{
+    display: inline;
+    text-align: center;
+    margin: 0 10px 0 0;
+ }
+ #navegador li a {
+    padding: 20px 7px 2px 7px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    margin: 30px ;
+    border-radius: 2px ;
+    
+
+   
+   
+    
+    text-decoration: none;
+ }
+ #navegador li a:hover{
+   
+    color: orangered;
+ }
+
+ /* slider */
+
+
+.slider{
+    grid-area: slider;
+}
+/* aca de define el tamano del slider  */
+.slider {
+    text-align: center;
+    overflow: hidden;
+    height: 700px;
+    width: 1000px;
+    margin: 0px auto;
+
+
+    
+    
+}
+
+#imagenes {
+    margin: 0;
+    left: 0;
+    display: flex;
+    width: 500%;
+    height: 100%;
+    animation: 15s slidy infinite alternate linear;
+    animation-timing-function: step-start;
+}
+
+li {
+    width: 100%;
+    list-style-type: none;
+}
+
+img {
+    object-fit: cover;
+    width: 90%;
+    height: 70%;
+    border-radius: 4px;
+}
+
+@keyframes slidy {
+    0% {
+        margin-left: 0;
+    }
+    20% {
+        margin-left: 0;
+    }
+    40% {
+        margin-left: -100%;
+    }
+    60% {
+        margin-left: -100%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    80% {
+        margin-left: -200%;
+    }
+    90% {
+        margin-left: -300%;
+    }
+    100% {
+        margin-left: -400%;
+    }
+}
+
+.footer img{
+    width: 180px;
+    height: 150px;
+
+}
